@@ -74,6 +74,7 @@ function CountdownTimer() {
     <div className="App">
       <header>
         <h1>Marriage Day</h1>
+        <p className="small-text">Toma & Shajeed</p>
       </header>
       <pre>{asciiTime}</pre> {/* Preserve ASCII formatting */}
     </div>

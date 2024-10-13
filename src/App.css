@@ -2,7 +2,7 @@
   text-align: center;
   background-color: black;
   color: white;
-  min-height: 100vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +24,12 @@ pre {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 40px;
+}
+
+.small-text {
+  font-size: 0.9rem;
+  color: #ccc;
+
 }
 
 @media (max-width: 600px) {
