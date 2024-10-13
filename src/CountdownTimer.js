@@ -47,6 +47,7 @@ function CountdownTimer() {
 
       if (distance < 0) {
         setAsciiTime("EXPIRED");
+        document.title = "Marriage Day - Time's Up!"; // Set document title
         return;
       }
 
@@ -57,11 +58,16 @@ function CountdownTimer() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+      const timerString = `${days}D ${hours}H ${minutes}M ${seconds}S`;
       setAsciiTime(convertToAscii(days, hours, minutes, seconds));
+      document.title = `${timerString} - Marriage Day`; // Update the document title
     };
 
     const timer = setInterval(updateTimer, 1000);
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      document.title = "Marriage Day"; // Reset the title when the component unmounts
+    };
   }, []);
 
   return (
