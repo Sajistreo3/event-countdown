@@ -39,7 +39,7 @@ function CountdownTimer() {
   const [asciiTime, setAsciiTime] = useState("");
 
   useEffect(() => {
-    const countDownDate = new Date("Jan 21, 2025 02:00:00").getTime();
+    const countDownDate = new Date("Jan 21, 2025 12:00:00").getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();

@@ -2,43 +2,53 @@
   text-align: center;
   background-color: black;
   color: white;
-  min-height: 92vh;
+  min-height: 100vh; /* Ensure the app fills the screen vertically */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', monospace;
+  font-family: 'Oxanium', sans-serif; /* Use the custom Google font globally */
   padding: 20px;
 }
 
-pre {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 3px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  max-width: 95vw;
-  text-align: right; /* Align text to the right */
+.timer div {
+  font-size: 120px; /* Significantly larger font size for visibility */
+  line-height: 1.2;
+  text-align: center;
+  color: white;
+  margin: 10px 0; /* Adds more space between the time elements */
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-size: 6rem; /* Larger size for the main title */
+  margin-bottom: 20px;
+  font-family: 'Bodoni Moda', serif; /* Elegant title font */
 }
 
 .small-text {
-  font-size: 0.9rem;
-  color: #ccc;
-
+  font-size: 2rem; /* Bigger size for subtext */
+  color: #fff; /* Ensuring text color is consistently white */
+  font-family: 'Cinzel', serif; /* Decorative font for subtext */
 }
 
+.fullscreen-fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays in the background */
+}
+
+
 @media (max-width: 600px) {
-  pre {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-align: right; /* Ensure text is still right-aligned on small screens */
+  .timer div {
+    font-size: 17vw; /* Adjusted font size for smaller screens */
   }
   h1 {
-    font-size: 1.8rem;
+    font-size: 4rem; /* Adjusted title size for mobile */
+  }
+  .small-text {
+    font-size: 1.5rem; /* Adjusted subtext size for mobile */
   }
 }
