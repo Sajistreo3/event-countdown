@@ -9,7 +9,8 @@ function CounterTimer() {
   useEffect(() => {
     // Set the countdown to UTC time equivalent of Jan 21, 2025 14:30:00 Bangladesh Time
     // Creating a date object in UTC directly
-    const countDownDate = new Date(Date.UTC(2025, 0, 21, 8, 30, 0)).getTime();
+    const countDownDate = new Date(Date.UTC(2025, 0, 21, 11
+      , 20, 0)).getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
